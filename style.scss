@@ -1,0 +1,19 @@
+$pink-color: #d52047;
+$orange-color: #ee3d18;
+$black-color: #0000;
+$white-color: #ffff;
+$gray-font-color: #828282;
+$margin-left: 5%;
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  font-family: "Lato", sans-serif;
+}
