@@ -97,7 +97,7 @@ header {
 .feature_element {
   margin-top: $margin;
   & .feature-text {
-    margin-top: -5 * ($margin);
+    margin-top: -2 * ($margin);
     background-color: $white-color;
     border-radius: 8px;
     box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
