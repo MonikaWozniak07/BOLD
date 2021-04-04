@@ -11,4 +11,71 @@ body {
   overflow-x: hidden;
   font-family: "Lato", sans-serif;
 }
+
+img {
+  max-width: 90vw;
+}
+
+header,
+.header-bg {
+  width: 100vw;
+  height: 100vh;
+}
+
+header {
+  background-image: url(/img/header.png);
+  background-size: cover;
+  color: #ffff;
+}
+
+header .logo {
+  position: absolute;
+  margin-left: 5%;
+  padding: 5% 2% 2% 0;
+  line-height: 22px;
+  font-size: 18px;
+}
+
+header .header-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+header .header-text .header_title {
+  font-size: 2em;
+  letter-spacing: 0.05rem;
+}
+
+header .header-text .header_subtitle {
+  margin-top: 2%;
+  line-height: 150%;
+}
+
+header .header-text .btn {
+  margin: 0 auto;
+  max-width: 30vw;
+  background-color: #ffff;
+  border-radius: 6px;
+  margin-top: 5%;
+}
+
+header .header-text .btn span {
+  color: #d52047;
+  text-align: center;
+}
+
+.header-text > * {
+  text-align: center;
+  padding: 2%;
+}
+
+.header-bg {
+  position: absolute;
+  top: 0;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(213, 32, 71, 0.8)), to(rgba(238, 61, 27, 0.8)));
+  background: linear-gradient(90deg, rgba(213, 32, 71, 0.8) 0%, rgba(238, 61, 27, 0.8) 100%);
+}
 /*# sourceMappingURL=style.css.map */

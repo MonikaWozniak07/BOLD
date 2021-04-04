@@ -3,7 +3,8 @@ $orange-color: #ee3d18;
 $black-color: #0000;
 $white-color: #ffff;
 $gray-font-color: #828282;
-$margin-left: 5%;
+$margin: 5%;
+$padding: 2%;
 
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
 
@@ -16,4 +17,65 @@ body {
   width: 100vw;
   overflow-x: hidden;
   font-family: "Lato", sans-serif;
+}
+img {
+  max-width: 90vw;
+}
+
+// Header
+header,
+.header-bg {
+  width: 100vw;
+  height: 100vh;
+}
+header {
+  background-image: url(/img/header.png);
+  background-size: cover;
+  color: $white-color;
+  & .logo {
+    position: absolute;
+    margin-left: $margin;
+    padding: $margin $padding $padding 0;
+    line-height: 22px;
+    font-size: 18px;
+  }
+  & .header-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    & .header_title {
+      font-size: 2em;
+      letter-spacing: 0.05rem;
+    }
+    & .header_subtitle {
+      margin-top: $padding;
+      line-height: 150%;
+    }
+    & .btn {
+      margin: 0 auto;
+      max-width: 30vw;
+      background-color: $white-color;
+      border-radius: 6px;
+      margin-top: $margin;
+      & span {
+        color: $pink-color;
+        text-align: center;
+      }
+    }
+  }
+}
+.header-text > * {
+  text-align: center;
+  padding: $padding;
+}
+
+.header-bg {
+  position: absolute;
+  top: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(213, 32, 71, 0.8) 0%,
+    rgba(238, 61, 27, 0.8) 100%
+  );
 }
