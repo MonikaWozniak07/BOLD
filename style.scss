@@ -135,3 +135,26 @@ header {
 .tech_element p {
   text-align: center;
 }
+// pink section
+.pink-section {
+  position: relative;
+  background-color: $coral-color;
+  color: $white-color;
+  padding-bottom: 2 * $padding;
+}
+.pink-section_text > * {
+  text-align: center;
+}
+.pink-section_text .icons {
+  margin: $margin 0;
+}
+.pink-section_images > * {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 15px;
+  display: none;
+}
+.pink-section_images img:nth-of-type(1) {
+  display: block;
+}

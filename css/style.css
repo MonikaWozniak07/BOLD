@@ -149,4 +149,32 @@ header .header-text .btn span {
 .tech_element p {
   text-align: center;
 }
+
+.pink-section {
+  position: relative;
+  background-color: #ed4c5c;
+  color: #ffff;
+  padding-bottom: 4%;
+}
+
+.pink-section_text > * {
+  text-align: center;
+}
+
+.pink-section_text .icons {
+  margin: 5% 0;
+}
+
+.pink-section_images > * {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 15px;
+  display: none;
+}
+
+.pink-section_images img:nth-of-type(1) {
+  display: block;
+}
 /*# sourceMappingURL=style.css.map */
