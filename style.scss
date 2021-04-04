@@ -1,4 +1,5 @@
 $pink-color: #d52047;
+$coral-color: #ed4c5c;
 $orange-color: #ee3d18;
 $black-color: #0000;
 $white-color: #ffff;
@@ -69,7 +70,7 @@ header {
       border-radius: 6px;
       margin-top: $margin;
       & span {
-        color: $pink-color;
+        color: $coral-color;
         text-align: center;
       }
     }
@@ -115,4 +116,22 @@ header {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+}
+
+// Technology
+.tech_element {
+  margin-top: $margin;
+}
+.tech_element > * {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+}
+.tech_element img:nth-of-type(2) {
+  margin-top: -2 * ($margin);
+}
+.tech_element p {
+  text-align: center;
 }
