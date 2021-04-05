@@ -69,10 +69,11 @@ header .header-text .header_subtitle {
 
 header .header-text .btn {
   margin: 0 auto;
-  max-width: 30vw;
+  max-width: 35vw;
   background-color: #ffff;
   border-radius: 6px;
   margin-top: 5%;
+  padding: 2%;
 }
 
 header .header-text .btn span {
@@ -128,6 +129,10 @@ header .header-text .btn span {
   margin-top: 5%;
 }
 
+.tech_element .tech-title {
+  font-weight: 600;
+}
+
 .tech_element > * {
   position: relative;
   left: 50%;
@@ -176,5 +181,61 @@ header .header-text .btn span {
 
 .pink-section_images img:nth-of-type(1) {
   display: block;
+}
+
+.contact-section_text,
+.contact-section_form {
+  text-align: center;
+}
+
+::-webkit-input-placeholder,
+select {
+  color: rgba(19, 39, 67, 0.5);
+}
+
+:-ms-input-placeholder,
+select {
+  color: rgba(19, 39, 67, 0.5);
+}
+
+::-ms-input-placeholder,
+select {
+  color: rgba(19, 39, 67, 0.5);
+}
+
+::placeholder,
+select {
+  color: rgba(19, 39, 67, 0.5);
+}
+
+input,
+select {
+  width: 90%;
+  padding: 2%;
+  margin-top: 2%;
+  border-radius: 6px;
+  border: 1px solid #333333;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: "Lato", sans-serif;
+}
+
+input:hover,
+select:hover {
+  border-color: #ed4c5c;
+}
+
+.contact-section_form .btn {
+  margin: 5% auto;
+  max-width: 35vw;
+  background-color: #ed4c5c;
+  border-radius: 6px;
+  margin-top: 5%;
+  padding: 2%;
+}
+
+.contact-section_form .btn span {
+  color: #ffff;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
