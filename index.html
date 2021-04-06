@@ -3,17 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>BOLD</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
    <div class="wrapper">
     <div class="header-bg"></div>
+    <div class="hamburger-nav" id="hamburger-nav">
+      <i class="fas fa-times" onclick="removeHamburger()"></i>
+      <div class="hamburger-nav_link">
+        <span><a href="#">Overview</a></span>
+        <span><a href="#features">Features</a></span>
+        <span><a href="#technology">Technology</a></span>
+        <span><a href="#contact">Contact</a></span>
+        <span><a href="#">Sign up</a></span>
+      </div>
+    </div>
      <header>
-       <div class="logo">
-         <img src="/img/Vector.png" alt="">
-         <span>CLOUDBUDGET</span>
-       </div>
+        <div class="logo">
+          <img src="/img/Vector.png" alt="">
+          <span>CLOUDBUDGET</span>
+        </div>
+        <div class="hamburger" onclick="showHamburger()">
+         <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav">
+          <span><a href="#">Overview</a></span>
+          <span><a href="#features">Features</a></span>
+          <span><a href="#technology">Technology</a></span>
+          <span><a href="#contact">Contact</a></span>
+          <span><a href="#">Sign up</a></span>
+        </div>
        <div class="header-text">
          <h1 class="header_title">CLOUDBUDGET</h1>
          <p class="header_subtitle">Cloud budget managment for everyone. Only €69.95 a Month After a 7 Day Trial of Up to €4.99</p>
@@ -24,7 +46,7 @@
      </header>
 
      <div class="features-section">
-       <div class="title">
+       <div class="title" id="features">
          <p>Features</p>
        </div>
        <div class="feature-section_container">
@@ -62,7 +84,7 @@
      </div>
 
      <div class="technology-section">
-      <p class="title">Technology</p>
+      <p class="title" id="technology">Technology</p>
       <div class="technology-section_container">
         <div class="tech_element">
           <img src="./img/01.png" alt="" class="tech-number">
@@ -110,7 +132,7 @@
 
      <div class="contact-section">
        <div class="contact-section_text">
-         <p class="title">Contact</p>
+         <p class="title" id="contact">Contact</p>
          <p class="subtitle">Questions or concerns? Just fill out the form below and our support team will get back to you within 24 hours</p>
        </div>
        <div class="contact-section_form">

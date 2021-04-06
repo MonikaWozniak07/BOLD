@@ -13,3 +13,15 @@ function readmoref(number) {
       setReadMoreStyle(readmoreText, "inline");
 }
 }
+
+const hamburgerNav = document.getElementById('hamburger-nav');
+const showHamburger = () => {
+    hamburgerNav.classList.add("show");
+}
+const removeHamburger = () => {
+    hamburgerNav.classList.remove("show");
+}
+
+document.querySelectorAll('.hamburger-nav_link a').forEach(link => {
+    link.addEventListener('click', removeHamburger);
+})

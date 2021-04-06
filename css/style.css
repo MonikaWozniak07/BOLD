@@ -6,6 +6,10 @@
           box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   width: 100vw;
   overflow-x: hidden;
@@ -30,6 +34,64 @@ img {
   padding: 2%;
 }
 
+.hamburger-nav {
+  position: fixed;
+  top: -100vh;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #ed4c5c;
+  z-index: 2;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.hamburger-nav i {
+  position: absolute;
+  right: 0;
+  margin-right: 5%;
+  padding: 5% 0 2% 2%;
+  font-size: 2em;
+  color: #ffff;
+}
+
+.hamburger-nav .hamburger-nav_link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 100vh;
+  margin-left: 5%;
+  padding: 5% 0 2% 2%;
+}
+
+.hamburger-nav .hamburger-nav_link a {
+  color: #ffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 22px;
+  font-size: calc(16px + (18 - 16) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.hamburger-nav .hamburger-nav_link a:hover {
+  font-weight: 600;
+}
+
+@media (min-width: 1024px) {
+  .hamburger-nav {
+    display: none;
+  }
+}
+
+.hamburger-nav.show {
+  top: 0vh;
+}
+
 header,
 .header-bg {
   width: 100vw;
@@ -48,7 +110,61 @@ header .logo {
   margin-left: 5%;
   padding: 5% 2% 2% 0;
   line-height: 22px;
-  font-size: calc(18px + (22 - 18) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(16px + (18 - 16) * ((100vw - 300px) / (1600 - 300)));
+}
+
+header .hamburger,
+header .nav {
+  position: absolute;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 5%;
+  padding: 5% 0 2% 2%;
+}
+
+header .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-width: 55vw;
+  text-align: center;
+}
+
+header .nav span {
+  padding: 0 2%;
+}
+
+header .nav span a {
+  color: #ffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 22px;
+  font-size: calc(16px + (18 - 16) * ((100vw - 300px) / (1600 - 300)));
+}
+
+header .nav span a:hover {
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  header .nav {
+    display: none;
+  }
+}
+
+header .hamburger {
+  font-size: calc(20px + (22 - 20) * ((100vw - 300px) / (1600 - 300)));
+}
+
+@media (min-width: 1024px) {
+  header .hamburger {
+    display: none;
+  }
 }
 
 header .header-text {

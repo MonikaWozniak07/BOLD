@@ -21,6 +21,9 @@ $xxlarge: 1440px;
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   width: 100vw;
   overflow-x: hidden;
@@ -41,6 +44,49 @@ img {
   line-height: 150%;
   padding: $padding;
 }
+// Hamburger-nav
+.hamburger-nav {
+  position: fixed;
+  top: -100vh;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: $coral-color;
+  z-index: 2;
+  transition: 0.2s;
+  & i {
+    position: absolute;
+    right: 0;
+    margin-right: $margin;
+    padding: $margin 0 $padding $padding;
+    font-size: 2em;
+    color: $white-color;
+  }
+  & .hamburger-nav_link {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+    margin-left: $margin;
+    padding: $margin 0 $padding $padding;
+    & a {
+      color: $white-color;
+      text-decoration: none;
+      text-transform: uppercase;
+      line-height: 22px;
+      font-size: calc(16px + (18 - 16) * ((100vw - 300px) / (1600 - 300)));
+      &:hover {
+        font-weight: 600;
+      }
+    }
+  }
+  @media (min-width: $large) {
+    display: none;
+  }
+}
+.hamburger-nav.show {
+  top: 0vh;
+}
 // Header
 header,
 .header-bg {
@@ -57,7 +103,43 @@ header {
     margin-left: $margin;
     padding: $margin $padding $padding 0;
     line-height: 22px;
-    font-size: calc(18px + (22 - 18) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(16px + (18 - 16) * ((100vw - 300px) / (1600 - 300)));
+  }
+  & .hamburger,
+  .nav {
+    position: absolute;
+    right: 0;
+    display: flex;
+    margin-right: $margin;
+    padding: $margin 0 $padding $padding;
+  }
+  & .nav {
+    display: flex;
+    justify-content: space-between;
+    min-width: 55vw;
+    text-align: center;
+    & span {
+      padding: 0 $padding;
+      & a {
+        color: $white-color;
+        text-decoration: none;
+        text-transform: uppercase;
+        line-height: 22px;
+        font-size: calc(16px + (18 - 16) * ((100vw - 300px) / (1600 - 300)));
+        &:hover {
+          font-weight: 600;
+        }
+      }
+    }
+    @media (max-width: $large) {
+      display: none;
+    }
+  }
+  & .hamburger {
+    font-size: calc(20px + (22 - 20) * ((100vw - 300px) / (1600 - 300)));
+    @media (min-width: $large) {
+      display: none;
+    }
   }
   & .header-text {
     position: absolute;
