@@ -9,7 +9,6 @@ function readmoref(number) {
       setReadMoreStyle(readmoreText, "none");
     } else {
       setReadMoreStyle(clickReadMore, "none");
-      setReadMoreStyle(clickReadMore, "none");
       setReadMoreStyle(readmoreText, "inline");
 }
 }
@@ -20,6 +19,7 @@ const featuresLink = document.querySelector('.features');
 const technologyLink = document.querySelector('.technology');
 const contactLink = document.querySelector('.contact');
 const sign_upLink = document.querySelector('.sign_up');
+
 const showHamburger = () => {
     hamburgerNav.classList.add("show");
     overviewLink.classList.add('left');

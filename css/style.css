@@ -254,7 +254,7 @@ header .header-text .btn {
   margin-top: 5%;
 }
 
-header .header-text .btn span {
+header .header-text .btn {
   font-size: calc(14px + (16 - 14) * ((100vw - 300px) / (1600 - 300)));
   text-align: center;
 }
@@ -599,7 +599,7 @@ select:focus {
   text-align: center;
 }
 
-.contact-section_form-values .btn span {
+.contact-section_form-values .btn {
   font-size: calc(14px + (16 - 14) * ((100vw - 300px) / (1600 - 300)));
   text-align: center;
 }

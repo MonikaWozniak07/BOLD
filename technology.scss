@@ -1,0 +1,38 @@
+.technology-section_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 $margin;
+}
+.tech_element {
+  margin-top: $padding;
+  padding-bottom: $margin;
+  & .tech-title {
+    font-size: calc(18px + (22 - 18) * ((100vw - 300px) / (1600 - 300)));
+    font-weight: 600;
+  }
+}
+.tech_element > * {
+  @include relative-x-center;
+}
+.tech_element-images {
+  position: relative;
+  top: -3 * $margin;
+  & img:nth-of-type(1) {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  & img:nth-of-type(2) {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 2 * ($margin);
+  }
+}
+.tech_element p {
+  text-align: center;
+  @media (min-width: $small) {
+    max-width: 30vw;
+  }
+}

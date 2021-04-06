@@ -1,0 +1,93 @@
+header,
+.header-bg {
+  width: 100vw;
+  height: 100vh;
+}
+header {
+  background-image: url(/img/header.png);
+  background-size: cover;
+  background-position: center;
+  color: $white-color;
+  & .logo {
+    position: absolute;
+    display: flex;
+    margin-left: $margin;
+    padding: $margin $padding $padding 0;
+    line-height: 22px;
+    font-size: calc(16px + (18 - 16) * ((100vw - 300px) / (1600 - 300)));
+    & span {
+      margin-left: $margin;
+    }
+  }
+  & .hamburger,
+  .nav {
+    position: absolute;
+    right: 0;
+    margin-right: $margin;
+    padding: $margin 0 $padding $padding;
+  }
+  & .nav {
+    display: flex;
+    justify-content: space-between;
+    width: 55vw;
+    text-align: center;
+    & span {
+      padding: 0 $padding;
+      & a {
+        @include link();
+      }
+    }
+    @media (max-width: $large) {
+      display: none;
+    }
+    @media (min-width: $xxlarge) {
+      width: 40vw;
+    }
+  }
+  & .hamburger {
+    font-size: calc(20px + (22 - 20) * ((100vw - 300px) / (1600 - 300)));
+    @media (min-width: $large) {
+      display: none;
+    }
+  }
+  & .header-text {
+    @include absolute-center;
+    & .header_title {
+      font-size: calc(32px + (72 - 32) * ((100vw - 300px) / (1600 - 300)));
+      letter-spacing: 0.05rem;
+    }
+    & .header_subtitle {
+      font-size: calc(18px + (22 - 18) * ((100vw - 300px) / (1600 - 300)));
+      line-height: 150%;
+      width: 90%;
+      margin: $padding auto 0 auto;
+      @media (min-width: $small) {
+        width: 65%;
+      }
+    }
+    & .btn {
+      @include button();
+      margin: 0 auto;
+      background-color: $white-color;
+      margin-top: $margin;
+      & span {
+        color: $coral-color;
+      }
+    }
+  }
+}
+
+.header-text > * {
+  text-align: center;
+  padding: $padding;
+}
+
+.header-bg {
+  position: absolute;
+  top: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(213, 32, 71, 0.8) 0%,
+    rgba(238, 61, 27, 0.8) 100%
+  );
+}

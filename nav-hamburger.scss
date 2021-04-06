@@ -1,0 +1,64 @@
+.hamburger-nav {
+  position: fixed;
+  top: -100vh;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(
+    90deg,
+    rgba(213, 32, 71, 1) 0%,
+    rgba(238, 61, 27, 1) 100%
+  );
+  z-index: 2;
+  transition: 0.2s;
+  & i {
+    position: absolute;
+    right: 0;
+    margin-right: $margin;
+    padding: $margin 0 $padding $padding;
+    font-size: 2em;
+    color: $white-color;
+  }
+  & .hamburger-nav_link {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+    margin-left: $margin;
+    padding: $margin 0 $padding $padding;
+    & a {
+      @include link();
+    }
+  }
+  @media (min-width: $large) {
+    display: none;
+  }
+}
+.hamburger-nav.show {
+  top: 0vh;
+}
+.overview,
+.features,
+.technology,
+.contact,
+.sign_up {
+  position: relative;
+  left: -100vw;
+  transition: 0.4s ease-out;
+}
+.overview.left,
+.features.left,
+.technology.left,
+.contact.left,
+.sign_up.left {
+  left: 0;
+  animation: opacityAnimation 0.4s ease-out;
+}
+@keyframes opacityAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,82 @@
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  margin: 0 $margin;
+}
+.contact-section_text,
+.contact-section_form {
+  text-align: center;
+}
+
+::placeholder,
+select {
+  color: rgba(19, 39, 67, 0.5);
+}
+input,
+select {
+  width: 100%;
+  padding: $padding;
+  margin-top: $padding;
+  border-radius: 6px;
+  border: 1px solid #333333;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: "Lato", sans-serif;
+  cursor: pointer;
+  outline: none;
+  &:focus {
+    border-color: $coral-color;
+  }
+}
+
+.contact-section_form-values .btn {
+  @include button();
+  position: relative;
+  background-color: $coral-color;
+  margin: $margin auto;
+  text-align: center;
+  & span {
+    color: $white-color;
+  }
+
+  @media (min-width: $small) {
+    margin: $margin 0;
+  }
+}
+@media (min-width: $small) {
+  .contact-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 2 * $padding 0;
+    & .contact-section_text {
+      padding-right: $margin;
+    }
+  }
+  .contact-section_text,
+  .contact-section_form {
+    width: 50%;
+    text-align: left;
+  }
+  .contact-section_text > * {
+    text-align: left;
+    padding-left: 0;
+    margin-right: $padding;
+  }
+  .contact-section_form {
+    & .contact-section_form-input_name {
+      display: flex;
+      justify-content: space-around;
+      & input:nth-of-type(1) {
+        margin-right: 2 * $padding;
+      }
+    }
+    & .contact-section_form-values {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      width: 100%;
+    }
+  }
+}
