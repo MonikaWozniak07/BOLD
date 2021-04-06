@@ -25,3 +25,18 @@ const removeHamburger = () => {
 document.querySelectorAll('.hamburger-nav_link a').forEach(link => {
     link.addEventListener('click', removeHamburger);
 })
+
+const contactBtn = document.getElementById('contact_btn');
+const inputFirstName = document.getElementById('input-first-name');
+const inputLastName = document.getElementById('input-last-name');
+const phoneInput = document.getElementById('input-phone')
+const select = document.getElementById('service');
+
+contactBtn.addEventListener('click', e => {
+    e.preventDefault();
+    if(inputFirstName.value.length >= 2 && inputLastName.value.length >=3 && phoneInput.value.length >=9 && select.value !== ''){
+        alert('Sent')
+    } else {
+        alert('Please fill in all fields in the form')
+    }
+})
