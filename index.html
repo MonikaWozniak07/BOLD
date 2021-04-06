@@ -14,11 +14,11 @@
     <div class="hamburger-nav" id="hamburger-nav">
       <i class="fas fa-times" onclick="removeHamburger()"></i>
       <div class="hamburger-nav_link">
-        <span><a href="#">Overview</a></span>
-        <span><a href="#features">Features</a></span>
-        <span><a href="#technology">Technology</a></span>
-        <span><a href="#contact">Contact</a></span>
-        <span><a href="#">Sign up</a></span>
+        <span><a class="overview" href="#overview">Overview</a></span>
+        <span><a class="features" href="#features">Features</a></span>
+        <span><a class="technology" href="#technology">Technology</a></span>
+        <span><a class="contact" href="#contact">Contact</a></span>
+        <span><a class="sign_up" href="#sign_up">Sign up</a></span>
       </div>
     </div>
      <header>
@@ -30,16 +30,16 @@
          <i class="fas fa-bars"></i>
         </div>
         <div class="nav">
-          <span><a href="#">Overview</a></span>
+          <span><a href="#overview">Overview</a></span>
           <span><a href="#features">Features</a></span>
           <span><a href="#technology">Technology</a></span>
           <span><a href="#contact">Contact</a></span>
-          <span><a href="#">Sign up</a></span>
+          <span><a href="#sign_up">Sign up</a></span>
         </div>
        <div class="header-text">
-         <h1 class="header_title">CLOUDBUDGET</h1>
+         <h1 class="header_title" id="overview">CLOUDBUDGET</h1>
          <p class="header_subtitle">Cloud budget managment for everyone. Only €69.95 a Month After a 7 Day Trial of Up to €4.99</p>
-         <div class="btn">
+         <div class="btn" id="sign_up">
            <span>Sign Up</span>
          </div>
        </div>
@@ -87,28 +87,41 @@
       <p class="title" id="technology">Technology</p>
       <div class="technology-section_container">
         <div class="tech_element">
-          <img src="./img/01.png" alt="" class="tech-number">
-          <img src="./img/ant-design_cloud-download-outline.png" alt="" class="tech-icon">
-          <p class="tech-title">Cloud Storage</p>
-          <p class="subtitle">Access your account from anywhere in the world on any device</p>
+          <div class="tech_element-images">
+            <img src="./img/01.png" alt="" class="tech-number">
+            <img src="./img/ant-design_cloud-download-outline.png" alt="" class="tech-icon">
+          </div>
+          <div class="tech_element-text">          
+            <p class="tech-title">Cloud Storage</p>
+            <p class="subtitle">Access your account from anywhere in the world on any device</p></div>
         </div>
         <div class="tech_element">
-          <img src="./img/02.png" alt="" class="tech-number">
-          <img src="./img/ant-design_security-scan-outline.png" alt="" class="tech-icon">
-          <p class="tech-title">Secure</p>
-          <p class="subtitle">All your information is stored on secure cloud servers</p>
+          <div class="tech_element-images">
+            <img src="./img/02.png" alt="" class="tech-number">
+            <img src="./img/ant-design_security-scan-outline.png" alt="" class="tech-icon">
+          </div>
+          <div class="tech_element-text">
+            <p class="tech-title">Secure</p>
+            <p class="subtitle">All your information is stored on secure cloud servers</p>
+          </div>
         </div>
         <div class="tech_element">
-          <img src="./img/03.png" alt="" class="tech-number">
-          <img src="./img/iwwa-file-pdf.png" alt="" class="tech-icon">
-          <p class="tech-title">PDF Download</p>
-          <p class="subtitle">Download any of your reports in PDF format</p>
+          <div class="tech_element-images">
+            <img src="./img/03.png" alt="" class="tech-number">
+            <img src="./img/iwwa-file-pdf.png" alt="" class="tech-icon">
+          </div>
+          <div class="tech_element-text">          
+            <p class="tech-title">PDF Download</p>
+            <p class="subtitle">Download any of your reports in PDF format</p></div>
         </div>
         <div class="tech_element">
-          <img src="./img/04.png" alt="" class="tech-number">
-          <img src="./img/iwwa-file-csv.png" alt="" class="tech-icon">
-          <p class="tech-title">CSV Download</p>
-          <p class="subtitle">All your informtion is stored on secure cloud servers</p>
+          <div class="tech_element-images">
+            <img src="./img/04.png" alt="" class="tech-number">
+            <img src="./img/iwwa-file-csv.png" alt="" class="tech-icon">
+          </div>
+          <div class="tech_element-text">          
+            <p class="tech-title">CSV Download</p>
+            <p class="subtitle">All your informtion is stored on secure cloud servers</p></div>
         </div>
       </div>
      </div>

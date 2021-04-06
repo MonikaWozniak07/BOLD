@@ -22,7 +22,7 @@ img {
 
 .title {
   font-size: 36px;
-  font-weight: bold;
+  font-weight: 600;
   text-align: center;
   padding: 5%;
 }
@@ -40,7 +40,8 @@ img {
   left: 0;
   height: 100vh;
   width: 100vw;
-  background-color: #ed4c5c;
+  background: -webkit-gradient(linear, left top, right top, from(#d52047), to(#ee3d1b));
+  background: linear-gradient(90deg, #d52047 0%, #ee3d1b 100%);
   z-index: 2;
   -webkit-transition: 0.2s;
   transition: 0.2s;
@@ -92,6 +93,45 @@ img {
   top: 0vh;
 }
 
+.overview,
+.features,
+.technology,
+.contact,
+.sign_up {
+  position: relative;
+  left: -100vw;
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+}
+
+.overview.left,
+.features.left,
+.technology.left,
+.contact.left,
+.sign_up.left {
+  left: 0;
+  -webkit-animation: opacityAnimation 0.4s ease-out;
+          animation: opacityAnimation 0.4s ease-out;
+}
+
+@-webkit-keyframes opacityAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opacityAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 header,
 .header-bg {
   width: 100vw;
@@ -124,9 +164,6 @@ header .hamburger,
 header .nav {
   position: absolute;
   right: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin-right: 5%;
   padding: 5% 0 2% 2%;
 }
@@ -138,7 +175,7 @@ header .nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  min-width: 55vw;
+  width: 55vw;
   text-align: center;
 }
 
@@ -161,6 +198,12 @@ header .nav span a:hover {
 @media (max-width: 1024px) {
   header .nav {
     display: none;
+  }
+}
+
+@media (min-width: 1440px) {
+  header .nav {
+    width: 40vw;
   }
 }
 
@@ -205,6 +248,7 @@ header .header-text .btn {
   border-radius: 6px;
   padding: 2%;
   text-transform: uppercase;
+  cursor: pointer;
   margin: 0 auto;
   background-color: #ffff;
   margin-top: 5%;
@@ -262,8 +306,9 @@ header .header-text .btn span {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .feature_element {
@@ -315,6 +360,12 @@ header .header-text .btn span {
   }
 }
 
+@media (min-width: 1200px) {
+  .feature_element .feature-text {
+    max-width: 15vw;
+  }
+}
+
 .feature_element > * {
   position: relative;
   left: 50%;
@@ -339,9 +390,8 @@ header .header-text .btn span {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin: 0 5%;
 }
 
@@ -360,28 +410,43 @@ header .header-text .btn span {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
-.tech_element img:nth-of-type(2) {
-  margin-top: -10%;
+.tech_element-images {
+  position: relative;
+  top: -15%;
+}
+
+.tech_element-images img:nth-of-type(1) {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.tech_element-images img:nth-of-type(2) {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin-top: 10%;
 }
 
 .tech_element p {
   text-align: center;
 }
 
+@media (min-width: 640px) {
+  .tech_element p {
+    max-width: 30vw;
+  }
+}
+
 .pink-section {
   position: relative;
   background-color: #ed4c5c;
   color: #ffff;
-  padding-bottom: 4%;
+  padding: 5% 0 10% 0;
 }
 
 .pink-section_text > * {
@@ -403,11 +468,13 @@ header .header-text .btn span {
           transform: translateX(-50%);
   border-radius: 15px;
   display: none;
+  opacity: 0.5;
 }
 
 .pink-section_images img:nth-of-type(1) {
   z-index: 1;
   display: block;
+  opacity: 1;
 }
 
 @media (min-width: 800px) {
@@ -525,11 +592,11 @@ select:focus {
   border-radius: 6px;
   padding: 2%;
   text-transform: uppercase;
+  cursor: pointer;
   position: relative;
   background-color: #ed4c5c;
   margin: 5% auto;
   text-align: center;
-  cursor: pointer;
 }
 
 .contact-section_form-values .btn span {

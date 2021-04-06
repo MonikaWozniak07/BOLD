@@ -15,11 +15,32 @@ function readmoref(number) {
 }
 
 const hamburgerNav = document.getElementById('hamburger-nav');
+const overviewLink = document.querySelector('.overview');
+const featuresLink = document.querySelector('.features');
+const technologyLink = document.querySelector('.technology');
+const contactLink = document.querySelector('.contact');
+const sign_upLink = document.querySelector('.sign_up');
 const showHamburger = () => {
     hamburgerNav.classList.add("show");
-}
+    overviewLink.classList.add('left');
+    setTimeout(function () {
+        featuresLink.classList.add("left");
+      }, 40);
+      setTimeout(function () {
+        technologyLink.classList.add("left");
+      }, 120);
+      setTimeout(function () {
+        contactLink.classList.add("left");
+      }, 160);
+      setTimeout(function () {
+        sign_upLink.classList.add("left");
+      }, 200);
+    };
 const removeHamburger = () => {
     hamburgerNav.classList.remove("show");
+    document.querySelectorAll('.hamburger-nav_link a').forEach(link => {
+        link.classList.remove('left');
+    })
 }
 
 document.querySelectorAll('.hamburger-nav_link a').forEach(link => {
