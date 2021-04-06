@@ -35,8 +35,9 @@ img {
   text-align: center;
   padding: $margin;
 }
-.subtitle {
-  font-size: 12px;
+.subtitle,
+.readmore {
+  font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (1600 - 300)));
   line-height: 150%;
   padding: $padding;
 }
@@ -56,7 +57,7 @@ header {
     margin-left: $margin;
     padding: $margin $padding $padding 0;
     line-height: 22px;
-    font-size: 18px;
+    font-size: calc(18px + (22 - 18) * ((100vw - 300px) / (1600 - 300)));
   }
   & .header-text {
     position: absolute;
@@ -64,12 +65,18 @@ header {
     top: 50%;
     transform: translate(-50%, -50%);
     & .header_title {
-      font-size: 2em;
+      font-size: calc(32px + (72 - 32) * ((100vw - 300px) / (1600 - 300)));
       letter-spacing: 0.05rem;
     }
     & .header_subtitle {
+      font-size: calc(18px + (22 - 18) * ((100vw - 300px) / (1600 - 300)));
       margin-top: $padding;
       line-height: 150%;
+      width: 90%;
+      margin: 0 auto;
+      @media (min-width: $small) {
+        width: 65%;
+      }
     }
     & .btn {
       margin: 0 auto;
@@ -80,6 +87,7 @@ header {
       padding: $padding;
       text-transform: uppercase;
       & span {
+        font-size: calc(14px + (16 - 14) * ((100vw - 300px) / (1600 - 300)));
         color: $coral-color;
         text-align: center;
       }
@@ -124,17 +132,18 @@ header {
 }
 
 .feature_element {
-  margin-top: $margin;
+  margin-top: $padding;
   padding-bottom: $margin;
   & .feature-text {
     margin-top: -2 * ($margin);
+    padding: $margin;
     background-color: $white-color;
     border-radius: 8px;
     box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
     max-width: 70vw;
     text-align: center;
     & .feature-title {
-      font-size: calc(18px + (20 - 18) * ((100vw - 300px) / (1600 - 300)));
+      font-size: calc(18px + (22 - 18) * ((100vw - 300px) / (1600 - 300)));
       font-weight: 600;
       line-height: 22px;
       padding: $padding;
@@ -160,20 +169,30 @@ header {
   left: 50%;
   transform: translateX(-50%);
 }
-
-// Technology
-.tech_element {
-  margin-top: $margin;
-  padding-bottom: $margin;
-  & .tech-title {
-    font-weight: 600;
-  }
+.readmore {
+  display: none;
 }
+.click-more {
+  color: $coral-color;
+  font-weight: 600;
+  padding: $padding;
+  cursor: pointer;
+}
+// Technology
+
 .technology-section_container {
   display: flex;
   flex-wrap: wrap;
   flex-grow: 1;
   justify-content: space-around;
+}
+.tech_element {
+  margin-top: $padding;
+  padding-bottom: $margin;
+  & .tech-title {
+    font-size: calc(18px + (22 - 18) * ((100vw - 300px) / (1600 - 300)));
+    font-weight: 600;
+  }
 }
 .tech_element > * {
   position: relative;
@@ -304,6 +323,7 @@ select:hover {
   & span {
     color: $white-color;
     text-transform: uppercase;
+    font-size: calc(14px + (16 - 14) * ((100vw - 300px) / (1600 - 300)));
   }
   @media (min-width: $xsmall) {
     max-width: 20vw;
@@ -334,13 +354,14 @@ select:hover {
   .contact-section_text > * {
     text-align: left;
     padding-left: 0;
+    margin-right: $padding;
   }
   .contact-section_form {
     & .contact-section_form-input_name {
       display: flex;
       justify-content: space-around;
       & input:nth-of-type(1) {
-        margin-right: $padding;
+        margin-right: 2 * $padding;
       }
     }
     & .contact-section_form-values {
