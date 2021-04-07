@@ -34,14 +34,17 @@
     }
     @media (min-width: $medium) {
       margin-top: -3 * ($margin);
-      max-width: 30vw;
+      max-width: 33vw;
     }
     @media (min-width: $large) {
       margin-top: -4 * ($margin);
-      max-width: 20vw;
+      max-width: 27vw;
     }
     @media (min-width: $xlarge) {
-      max-width: 15vw;
+      max-width: 24vw;
+    }
+    @media (min-width: $xxlarge) {
+      max-width: 20vw;
     }
   }
 }

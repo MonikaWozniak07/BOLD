@@ -59,6 +59,11 @@ $xxlarge: 1440px;
   padding: 0;
   box-sizing: border-box;
 }
+::-webkit-scrollbar,
+::-webkit-appearance {
+  display: none;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -83,9 +88,9 @@ img {
   padding: $padding;
 }
 
-@import "./nav-hamburger.scss";
-@import "./header.scss";
-@import "./features.scss";
-@import "./technology.scss";
-@import "./pink-section.scss";
-@import "./contact.scss";
+@import "nav-hamburger";
+@import "header";
+@import "features";
+@import "technology";
+@import "pink-section";
+@import "contact";

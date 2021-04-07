@@ -11,6 +11,9 @@
     font-size: calc(18px + (22 - 18) * ((100vw - 300px) / (1600 - 300)));
     font-weight: 600;
   }
+  @media (min-width: $large) {
+    flex-basis: 20%;
+  }
 }
 .tech_element > * {
   @include relative-x-center;
