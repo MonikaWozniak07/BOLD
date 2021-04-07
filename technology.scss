@@ -31,6 +31,9 @@
     left: 50%;
     transform: translateX(-50%);
     margin-top: 2 * ($margin);
+    @media (min-width: $medium) {
+      margin-top: 3 * ($margin);
+    }
   }
 }
 .tech_element p {
