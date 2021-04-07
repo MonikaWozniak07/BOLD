@@ -7,6 +7,9 @@
 .pink-section_text > * {
   text-align: center;
 }
+.pink-section_text .title {
+  font-weight: 400;
+}
 .pink-section_text .icons {
   margin: $margin;
   & img {

@@ -15,9 +15,6 @@ header {
     padding: $margin $padding $padding 0;
     line-height: 22px;
     font-size: calc(16px + (18 - 16) * ((100vw - 300px) / (1600 - 300)));
-    & span {
-      margin-left: $margin;
-    }
   }
   & .hamburger,
   .nav {

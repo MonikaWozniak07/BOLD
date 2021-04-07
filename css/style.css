@@ -81,7 +81,7 @@ img {
   text-decoration: none;
   text-transform: uppercase;
   line-height: 22px;
-  font-size: calc(16px + (18 - 16) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(14px + (16 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
 .hamburger-nav .hamburger-nav_link a:hover {
@@ -161,10 +161,6 @@ header .logo {
   font-size: calc(16px + (18 - 16) * ((100vw - 300px) / (1600 - 300)));
 }
 
-header .logo span {
-  margin-left: 5%;
-}
-
 header .hamburger,
 header .nav {
   position: absolute;
@@ -193,7 +189,7 @@ header .nav span a {
   text-decoration: none;
   text-transform: uppercase;
   line-height: 22px;
-  font-size: calc(16px + (18 - 16) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(14px + (16 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
 header .nav span a:hover {
@@ -469,6 +465,10 @@ header .header-text .btn span {
 
 .pink-section_text > * {
   text-align: center;
+}
+
+.pink-section_text .title {
+  font-weight: 400;
 }
 
 .pink-section_text .icons {

@@ -18,7 +18,7 @@ $xxlarge: 1440px;
   text-decoration: none;
   text-transform: uppercase;
   line-height: 22px;
-  font-size: calc(16px + (18 - 16) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(14px + (16 - 14) * ((100vw - 300px) / (1600 - 300)));
   &:hover {
     font-weight: 600;
   }
