@@ -155,17 +155,21 @@ header .logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 5%;
+  margin-left: 10%;
   padding: 5% 2% 2% 0;
   line-height: 22px;
   font-size: calc(16px + (18 - 16) * ((100vw - 300px) / (1600 - 300)));
+}
+
+header .logo span {
+  margin-left: 5%;
 }
 
 header .hamburger,
 header .nav {
   position: absolute;
   right: 0;
-  margin-right: 5%;
+  margin-right: 10%;
   padding: 5% 0 2% 2%;
 }
 
@@ -296,6 +300,7 @@ header .header-text .btn span {
 
 .features-section {
   background-color: #fafafa;
+  padding: 0 5%;
 }
 
 .feature-section_container {
@@ -399,7 +404,7 @@ header .header-text .btn span {
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  margin: 0 5%;
+  margin: 0 10%;
 }
 
 .tech_element {
@@ -504,6 +509,10 @@ header .header-text .btn span {
     -ms-grid-rows: auto;
         grid-template-rows: auto;
   }
+  .pink-section_text {
+    margin-left: 0;
+    padding-left: 15%;
+  }
   .pink-section_text > * {
     text-align: left;
     padding-left: 5%;
@@ -511,7 +520,6 @@ header .header-text .btn span {
   }
   .pink-section_images {
     position: relative;
-    margin: 5%;
   }
   .pink-section_images img {
     position: absolute;
@@ -558,7 +566,7 @@ header .header-text .btn span {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 0 5%;
+  margin: 0 10%;
 }
 
 .contact-section_text,

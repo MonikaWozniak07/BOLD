@@ -33,6 +33,10 @@
     grid-template-columns: 40vw 60vw;
     grid-template-rows: auto;
   }
+  .pink-section_text {
+    margin-left: 0;
+    padding-left: 3 * $margin;
+  }
   .pink-section_text > * {
     text-align: left;
     padding-left: $margin;
@@ -40,7 +44,6 @@
   }
   .pink-section_images {
     position: relative;
-    margin: $margin;
     & img {
       @include absolute-center;
       margin-top: $margin;

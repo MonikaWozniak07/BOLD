@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 0 $margin;
+  margin: 0 2 * $margin;
 }
 .tech_element {
   margin-top: $padding;
